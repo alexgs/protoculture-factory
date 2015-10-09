@@ -1,0 +1,15 @@
+{
+  "name": "protoculture-factory",
+  "version": "0.0.1",
+  "description": "Persistent, composable, immutable objects!",
+  "main": "index.js",
+  "repository": "https://github.com/philgs/protoculture-factory.git",
+  "author": "Phil Gates-Shannon <phil.gs@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
