@@ -1,6 +1,6 @@
 {
   "name": "protoculture-factory",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Persistent, composable, immutable objects!",
   "main": "index.js",
   "repository": "https://github.com/philgs/protoculture-factory.git",
@@ -10,6 +10,10 @@
 
   },
   "devDependencies": {
-
+    "mocha": "^2.2.5",
+    "chai": "^2.1.0",
+    "dirty-chai": "^1.2.1",
+    "sinon": "^1.10.2",
+    "sinon-chai": "^2.5.0"
   }
 }
