@@ -9,7 +9,8 @@ let chai = require( 'chai' )
 describe( 'A persistent immutable object literal', () => {
     it( 'should be created with no properties', () => {
         let io0 = ProtocultureFactory.makeObject();
-        expect( countProps( io0 ) ).to.equal( 0 );
+        //expect( countProps( io0 ) ).to.equal( 0 );
+        expect( io0.keys().length ).to.equal( 0 );
     });
 
     it( 'should be able to add properties', () => {
@@ -17,9 +18,12 @@ describe( 'A persistent immutable object literal', () => {
         let io1 = io0.add( 'foo', 123 );
         let io2 = io1.add( 'bar', 'zyx' );
 
-        expect( countProps( io0 ) ).to.equal( 0 );
-        expect( countProps( io1 ) ).to.equal( 1 );
-        expect( countProps( io2 ) ).to.equal( 2 );
+        expect( io0.keys().length ).to.equal( 0 );
+        expect( io1.keys().length ).to.equal( 1 );
+        expect( io2.keys().length ).to.equal( 2 );
+        //expect( countProps( io0 ) ).to.equal( 0 );
+        //expect( countProps( io1 ) ).to.equal( 1 );
+        //expect( countProps( io2 ) ).to.equal( 2 );
     });
 
     it( 'should have read-only properties', () => {
