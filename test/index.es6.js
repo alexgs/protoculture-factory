@@ -6,10 +6,11 @@ let chai = require( 'chai' )
     , ProtocultureFactory = require( '../index.js' )
     ;
 
+chai.use( require( 'dirty-chai' ) );
+
 describe( 'A persistent immutable object literal', () => {
     it( 'should be created with no properties', () => {
         let io0 = ProtocultureFactory.makeObject();
-        //expect( countProps( io0 ) ).to.equal( 0 );
         expect( io0.keys().length ).to.equal( 0 );
     });
 
@@ -21,9 +22,8 @@ describe( 'A persistent immutable object literal', () => {
         expect( io0.keys().length ).to.equal( 0 );
         expect( io1.keys().length ).to.equal( 1 );
         expect( io2.keys().length ).to.equal( 2 );
-        //expect( countProps( io0 ) ).to.equal( 0 );
-        //expect( countProps( io1 ) ).to.equal( 1 );
-        //expect( countProps( io2 ) ).to.equal( 2 );
+
+        expect( io1.foo ).to.equal( io2.foo );
     });
 
     it( 'should have read-only properties', () => {

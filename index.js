@@ -18,3 +18,18 @@ ImmutablePrototype.keys = function() {
     }
     return result;
 };
+
+ImmutablePrototype.add = function( key, value ) {
+    // Create a new immutable
+    let result = Object.create( ImmutablePrototype );
+
+    // Copy all enumerable properties from `this` to the new immutable
+    let oldProps = this.keys();
+    for ( let oldProp of oldProps ) {
+        result[oldProp] = this[oldProp];
+    }
+
+    // Add the new property and return the new immutable
+    result[key] = value;
+    return result;
+};
