@@ -7,7 +7,7 @@
   "author": "Phil Gates-Shannon <phil.gs@gmail.com>",
   "license": "MIT",
   "dependencies": {
-
+    "immutable": "^3.7.5"
   },
   "devDependencies": {
     "mocha": "^2.2.5",
