@@ -22,20 +22,17 @@ ProtocultureFactory.compose( Spinner, ImmutableMapTrait);
 
 describe( 'A class for creating persistent immutable objects', () => {
     it( 'should have a prototype with methods from the trait', () => {
+        let spin = new Spinner( { data: { id: 0, value: 0 } } );
+        expect( typeof spin.set ).to.equal( 'function' );
+        expect( typeof spin.get ).to.equal( 'function' );
     });
 
-    it( 'should create frozen objects', () => {
-    });
+    it( 'should create frozen objects' );
 });
 
 describe( 'A persistent immutable object', () => {
-    it( 'should fail when setting a property directly', () => {
-    });
-
-    it( 'should be able to add properties', () => {
-    });
-
-    it( 'should have read-only properties', () => {
-    });
+    it( 'should fail when setting a property directly' );
+    it( 'should be able to add properties' );
+    it( 'should have read-only properties' );
 });
 
