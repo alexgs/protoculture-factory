@@ -21,13 +21,22 @@ class Spinner {
 ProtocultureFactory.compose( Spinner, ImmutableMapTrait);
 
 describe( 'A class for creating persistent immutable objects', () => {
-    it( 'should have a prototype with methods from the trait', () => {
-        let spin = new Spinner( { data: { id: 0, value: 0 } } );
-        expect( typeof spin.set ).to.equal( 'function' );
-        expect( typeof spin.get ).to.equal( 'function' );
+    context( '(class fundamentals)', () => {
+        it( 'should have a prototype with methods from the trait', () => {
+            expect( typeof Spinner.prototype.set ).to.equal( 'function' );
+            expect( typeof Spinner.prototype.get ).to.equal( 'function' );
+
+            let spin = new Spinner( { data: { id: 0, value: 0 } } );
+            expect( typeof spin.set ).to.equal( 'function' );
+            expect( typeof spin.get ).to.equal( 'function' );
+        });
+
+        it( 'should create frozen objects' );
     });
 
-    it( 'should create frozen objects' );
+    context( '(defensive programming)', () => {
+        it( 'should reject bad stuff' );
+    });
 });
 
 describe( 'A persistent immutable object', () => {
